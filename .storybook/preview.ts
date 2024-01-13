@@ -14,5 +14,21 @@ export const parameters: Parameters = {
       date: /Date$/
     }
   },
-  layout: 'fullscreen'
+  layout: 'fullscreen',
+  backgrounds: {
+    default: 'won-dark',
+    values: [
+      {
+        name: 'won-light',
+        value: '#FAFAFA'
+      },
+      {
+        name: 'won-dark',
+        value: '#06092B'
+      }
+    ]
+  },
+  nextjs: {
+    appDirectory: true
+  }
 }
