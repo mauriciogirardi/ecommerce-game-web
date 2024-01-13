@@ -1,21 +1,21 @@
 'use client'
 import clsx from 'clsx'
-import colors from 'tailwindcss/colors'
+
+import { TextColorsTypes } from '@/@types/colors'
 
 export type LogoProps = {
-  theme?: 'light' | 'dark'
+  color?: TextColorsTypes
   size?: 'normal' | 'large'
   hideOnMobile?: boolean
   id?: string
 }
 
 export function Logo({
-  theme = 'light',
+  color = 'text-white',
   size = 'normal',
   hideOnMobile = false,
   id = 'logo'
 }: LogoProps) {
-  const color = theme === 'light' ? colors.white : colors.black
   const sizeIcon = {
     normal: 'w-[6.875rem]',
     large: 'w-[12.5rem]'
@@ -23,8 +23,7 @@ export function Logo({
 
   return (
     <svg
-      style={{ color }}
-      className={clsx(sizeIcon, hideOnMobile && 'pointer-events-none')}
+      className={clsx(color, sizeIcon, hideOnMobile && 'pointer-events-none')}
       fill="none"
       viewBox="0 0 158 48"
       role="img"

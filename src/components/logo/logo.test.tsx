@@ -9,16 +9,12 @@ describe('<Logo />', () => {
 
     expect(screen.getByLabelText(/won games/i)).toHaveClass('w-[6.875rem]')
     expect(screen.getByLabelText(/won games/i)).toBeInTheDocument()
-    expect(screen.getByLabelText(/won games/i)).toHaveStyle({
-      color: '#fff'
-    })
+    expect(screen.getByLabelText(/won games/i)).toHaveClass('text-white')
   })
 
   it('should be able to change the theme to dark by props', () => {
-    render(<Logo theme="dark" />)
-    expect(screen.getByLabelText(/won games/i)).toHaveStyle({
-      color: '#000'
-    })
+    render(<Logo color="text-black" />)
+    expect(screen.getByLabelText(/won games/i)).toHaveClass('text-black')
   })
 
   it('should be able to change the size to large', () => {
