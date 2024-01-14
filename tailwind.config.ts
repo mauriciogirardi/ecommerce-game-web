@@ -56,6 +56,11 @@ const config: Config = {
         overlay: '30',
         modal: '40',
         alwaysOnTop: '50'
+      },
+
+      backgroundImage: {
+        linear:
+          'linear-gradient(179deg, #FF5F5F -14.51%, #F062C0 102.86%, #F23131 102.86%)'
       }
     }
   }
