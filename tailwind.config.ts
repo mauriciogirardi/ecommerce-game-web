@@ -42,13 +42,13 @@ const config: Config = {
         gutter: '2rem'
       },
       spacing: {
-        xxsmall: '0.8rem',
-        xsmall: '1.6rem',
-        small: '2.4rem',
-        medium: '3.2rem',
-        large: '4.0rem',
-        xlarge: '4.8rem',
-        xxlarge: '5.6rem'
+        xxsmall: '0.5rem', // 8px
+        xsmall: '1rem', // 16px
+        small: '1.5rem', // 20px
+        medium: '2rem', // 32px
+        large: '2.5rem', // 40px
+        xlarge: '3rem', // 48px
+        xxlarge: '3.5rem' // 56px
       },
       zIndex: {
         base: '10',
@@ -61,6 +61,22 @@ const config: Config = {
       backgroundImage: {
         linear:
           'linear-gradient(179deg, #FF5F5F -14.51%, #F062C0 102.86%, #F23131 102.86%)'
+      },
+
+      animation: {
+        'hover-link': 'hover-link 0.2s forwards'
+      },
+
+      keyframes: {
+        'hover-link': {
+          from: { width: '0' },
+          to: { width: '100%' }
+        }
+      },
+
+      transitionProperty: {
+        menu: 'opacity 0.3s ease-in-out',
+        link: 'transform 0.3s ease-in-out'
       }
     }
   }

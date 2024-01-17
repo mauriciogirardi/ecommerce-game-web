@@ -37,6 +37,7 @@ export const Disabled: StoryObj<typeof Button> = {
 
 export const Icon: StoryObj<typeof Button> = {
   args: {
-    icon: <BadgePlusIcon />
+    icon: <BadgePlusIcon />,
+    children: 'Buy now'
   }
 }

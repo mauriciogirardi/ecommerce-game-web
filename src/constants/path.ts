@@ -1,0 +1,6 @@
+export const PATH_HOME = '/'
+export const PATH_STORE = '/store'
+export const PATH_MY_ACCOUNT = '/my-account'
+export const PATH_WISHLIST = '/wishlist'
+export const PATH_EXPLORE = '/explore'
+export const PATH_SIGN_UP = '/sign-up'

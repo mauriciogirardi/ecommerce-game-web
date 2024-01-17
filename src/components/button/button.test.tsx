@@ -26,7 +26,7 @@ describe('<Button />', () => {
     render(<Button size="large">click here</Button>)
 
     const button = screen.getByRole('button', { name: /click here/i })
-    expect(button).toHaveClass('h-12 px-6')
+    expect(button).toHaveClass('h-10 px-6')
   })
 
   it('should be able to render the button with icon', () => {

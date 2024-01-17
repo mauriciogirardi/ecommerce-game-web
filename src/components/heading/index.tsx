@@ -1,36 +1,51 @@
 'use client'
 
-import clsx from 'clsx'
+import { cva, VariantProps } from 'class-variance-authority'
 import { ReactNode } from 'react'
 
-import { BorderColorsType, TextColorsTypes } from '@/@types/colors'
+import { cn } from '@/lib/utils'
 
-export type HeadingProps = {
+const headingVariants = cva('text-xlarge lg:text-xxlarge font-bold', {
+  variants: {
+    color: {
+      white: 'text-white',
+      black: 'text-black'
+    },
+    line: {
+      left: 'pl-xxsmall border-l-4',
+      bottom:
+        'relative after:absolute  after:bottom-[-3px] after:left-0 after:w-12 after:border-b-4 after:content-[""]'
+    },
+    lineColor: {
+      primary: 'after:border-primary border-primary',
+      secondary: 'after:border-secondary border-secondary'
+    }
+  },
+  defaultVariants: {
+    color: 'white',
+    lineColor: 'secondary'
+  }
+})
+
+export type HeadingProps = VariantProps<typeof headingVariants> & {
   children: ReactNode
-  color?: TextColorsTypes
-  lineLeft?: boolean
-  lineBottom?: boolean
-  colorBorder?: BorderColorsType
+  className?: string
 }
 
-export function Heading({
+function Heading({
   children,
-  color = 'text-white',
-  colorBorder = 'secondary',
-  lineLeft = false,
-  lineBottom = false
+  color,
+  lineColor,
+  line,
+  className
 }: HeadingProps) {
   return (
-    <h2
-      className={clsx(
-        color,
-        lineLeft && `pl-xxsmall border-${colorBorder} border-l-4`,
-        lineBottom &&
-          `after:border-${colorBorder} relative after:absolute  after:bottom-[-3px] after:left-0 after:w-12 after:border-b-4  after:content-[""]`,
-        'text-xlarge font-bold lg:text-xxlarge'
-      )}
-    >
+    <h2 className={cn(headingVariants({ color, line, lineColor, className }))}>
       {children}
     </h2>
   )
 }
+
+Heading.displayName = 'Heading'
+
+export { Heading, headingVariants }
