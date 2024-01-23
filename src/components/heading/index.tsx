@@ -10,7 +10,7 @@ const headingVariants = cva('font-bold', {
     line: {
       left: 'pl-xxsmall border-l-4',
       bottom:
-        'relative after:absolute after:bottom-[-3px] after:left-0 after:w-12 after:border-b-4 after:content-[""]'
+        'relative after:absolute after:bottom-[-3px] after:left-0 after:w-[30px] after:border-b-4 after:content-[""]'
     },
     lineColor: {
       primary: 'after:border-primary border-primary',

@@ -23,13 +23,13 @@ export const Default: StoryObj<typeof Heading> = {
 export const LineLeft: StoryObj<typeof Heading> = {
   args: {
     children: 'Heading here',
-    lineLeft: true
+    line: 'left'
   }
 }
 
 export const LineBottom: StoryObj<typeof Heading> = {
   args: {
     children: 'Heading here',
-    lineBottom: true
+    line: 'bottom'
   }
 }
