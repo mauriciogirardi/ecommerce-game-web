@@ -5,25 +5,31 @@ import { ReactNode } from 'react'
 
 import { cn } from '@/lib/utils'
 
-const headingVariants = cva('text-xlarge lg:text-xxlarge font-bold', {
+const headingVariants = cva('font-bold', {
   variants: {
-    color: {
-      white: 'text-white',
-      black: 'text-black'
-    },
     line: {
       left: 'pl-xxsmall border-l-4',
       bottom:
-        'relative after:absolute  after:bottom-[-3px] after:left-0 after:w-12 after:border-b-4 after:content-[""]'
+        'relative after:absolute after:bottom-[-3px] after:left-0 after:w-12 after:border-b-4 after:content-[""]'
     },
     lineColor: {
       primary: 'after:border-primary border-primary',
       secondary: 'after:border-secondary border-secondary'
+    },
+    size: {
+      default: 'text-[28px]',
+      medium: 'text-xl',
+      small: 'text-base'
+    },
+    color: {
+      white: 'text-white',
+      black: 'text-black'
     }
   },
   defaultVariants: {
-    color: 'white',
-    lineColor: 'secondary'
+    lineColor: 'secondary',
+    size: 'default',
+    color: 'white'
   }
 })
 
@@ -36,11 +42,16 @@ function Heading({
   children,
   color,
   lineColor,
+  size,
   line,
   className
 }: HeadingProps) {
   return (
-    <h2 className={cn(headingVariants({ color, line, lineColor, className }))}>
+    <h2
+      className={cn(
+        headingVariants({ line, lineColor, size, color, className })
+      )}
+    >
       {children}
     </h2>
   )

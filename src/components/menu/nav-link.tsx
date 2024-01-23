@@ -10,7 +10,12 @@ export type NavLinkProps = {
 
 export function NavLink({ href, label, className }: NavLinkProps) {
   return (
-    <li className={cn('mb-xsmall list-none text-large text-black', className)}>
+    <li
+      className={cn(
+        'mb-xsmall list-none text-large text-black md:mb-0',
+        className
+      )}
+    >
       <Link
         aria-label={label}
         href={href}

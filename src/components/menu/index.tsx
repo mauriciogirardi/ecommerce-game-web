@@ -36,11 +36,11 @@ export function Menu({ username }: MenuProps) {
           <Logo hideOnMobile />
         </Link>
 
-        <div className="ml-8 hidden items-center gap-6 md:flex">
+        <div className="ml-6 hidden items-center gap-6 md:flex">
           <NavLink
             href={PATH_HOME}
             label="Home"
-            className="mb-0 ml-8 text-[1.2rem] text-white"
+            className="mb-0 text-[1.2rem] text-white"
           />
           <NavLink
             href={PATH_EXPLORE}

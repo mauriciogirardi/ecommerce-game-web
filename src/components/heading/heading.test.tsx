@@ -38,4 +38,18 @@ describe('<Heading />', () => {
     const heading = screen.getByRole('heading', { name: /heading/i })
     expect(heading).toHaveClass('after:border-primary')
   })
+
+  it('should be able to render the heading with a small size', () => {
+    render(<Heading size="small">Heading</Heading>)
+    const heading = screen.getByRole('heading', { name: /heading/i })
+    expect(heading).toHaveClass('text-base')
+  })
+
+  it('should be able to render the heading with a medium size', () => {
+    render(<Heading size="medium">Heading</Heading>)
+    const heading = screen.getByRole('heading', { name: /heading/i })
+    expect(heading).toHaveStyle({
+      'font-size': '1.5em'
+    })
+  })
 })
