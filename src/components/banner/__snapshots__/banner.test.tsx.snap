@@ -1,0 +1,48 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Banner /> > should be able to render the Banner 1`] = `
+<main
+  class="relative md:shadow-sm"
+>
+  <img
+    alt="Defy death"
+    class="h-[230px] w-full bg-center md:h-[580px]"
+    data-nimg="1"
+    decoding="async"
+    height="368"
+    loading="lazy"
+    src="/_next/image?url=%2Fassets%2Fimgs%2Fbanner.png&w=1080&q=100"
+    srcset="/_next/image?url=%2Fassets%2Fimgs%2Fbanner.png&w=640&q=100 1x, /_next/image?url=%2Fassets%2Fimgs%2Fbanner.png&w=1080&q=100 2x"
+    style="color: transparent;"
+    width="500"
+  />
+  <div
+    class="bg-black/70 p-5 text-white md:absolute md:bottom-0 md:left-0 md:right-0 md:p-8"
+  >
+    <h1
+      class="text-2xl font-bold"
+    >
+      Defy death
+    </h1>
+    <h2>
+      Play the new 
+      <strong
+        style="color:#F231A5;"
+      >
+        CrashLands
+      </strong>
+       season
+    </h2>
+    <a
+      class="mt-4 block"
+      href="/"
+    >
+      <button
+        class="inline-flex items-center justify-center whitespace-nowrap rounded font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 bg-linear hover:opacity-90 h-10 px-8 text-white"
+      >
+        Buy now
+      </button>
+    </a>
+  </div>
+</main>
+`;

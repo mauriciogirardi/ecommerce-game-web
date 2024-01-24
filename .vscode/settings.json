@@ -2,7 +2,9 @@
   "cSpell.words": [
     "autodocs",
     "clsx",
+    "dompurify",
     "esnext",
+    "imgs",
     "plopfile",
     "poppins",
     "wongames",
@@ -10,5 +12,5 @@
     "xxlarge",
     "xxsmall"
   ],
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": true
 }
