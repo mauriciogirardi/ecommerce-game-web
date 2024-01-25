@@ -5,6 +5,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Button } from '../button'
+import { Ribbon, RibbonProps } from '../ribbon'
+
+export type RibbonTypes = {
+  label: string
+  size?: RibbonProps['size']
+  color?: RibbonProps['color']
+}
 
 export type BannerProps = {
   img: string
@@ -13,6 +20,7 @@ export type BannerProps = {
   btnLink: string
   btnLabel: string
   alt?: string
+  ribbon?: RibbonTypes
 }
 
 export function Banner({
@@ -20,6 +28,7 @@ export function Banner({
   btnLink,
   img,
   subtile,
+  ribbon,
   title,
   alt
 }: BannerProps) {
@@ -43,6 +52,16 @@ export function Banner({
           <Button size="large">{btnLabel}</Button>
         </Link>
       </div>
+
+      {ribbon?.label && (
+        <Ribbon
+          color={ribbon.color}
+          size={ribbon.size}
+          className="right-0 before:hidden lg:-right-4 lg:before:block"
+        >
+          {ribbon.label}
+        </Ribbon>
+      )}
     </main>
   )
 }

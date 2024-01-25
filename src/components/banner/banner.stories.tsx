@@ -20,3 +20,14 @@ export const Default: StoryObj<typeof Banner> = {
     ...mockBanner
   }
 }
+
+export const WithRibbon: StoryObj<typeof Banner> = {
+  args: {
+    ...mockBanner,
+    ribbon: {
+      label: 'My Ribbon',
+      color: 'secondary',
+      size: 'default'
+    }
+  }
+}

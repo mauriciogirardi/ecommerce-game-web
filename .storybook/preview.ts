@@ -1,10 +1,17 @@
 import '../src/app/globals.css'
 
+import { withThemeByClassName } from '@storybook/addon-themes'
 import type { Parameters } from '@storybook/react'
 
-// export const decorators = [
-//   (Story) => ()
-// ]
+export const decorators = [
+  withThemeByClassName({
+    themes: {
+      light: 'light',
+      dark: 'dark'
+    },
+    defaultTheme: 'dark'
+  })
+]
 
 export const parameters: Parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -27,8 +34,5 @@ export const parameters: Parameters = {
         value: '#06092B'
       }
     ]
-  },
-  nextjs: {
-    appDirectory: true
   }
 }

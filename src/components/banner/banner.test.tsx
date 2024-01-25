@@ -29,4 +29,18 @@ describe('<Banner />', () => {
 
     expect(container.firstChild).toMatchSnapshot()
   })
+
+  it('should render a Ribbon', () => {
+    render(
+      <Banner
+        ribbon={{ label: 'My Ribbon', color: 'secondary', size: 'small' }}
+        {...mockBanner}
+      />
+    )
+
+    expect(screen.getByText(/my ribbon/i)).toBeInTheDocument()
+    expect(screen.getByText(/my ribbon/i)).toHaveClass(
+      'text-xs h-6 bg-secondary'
+    )
+  })
 })
