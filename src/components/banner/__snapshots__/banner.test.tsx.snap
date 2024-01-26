@@ -6,7 +6,7 @@ exports[`<Banner /> > should be able to render the Banner 1`] = `
 >
   <img
     alt="Defy death"
-    class="h-[230px] w-full bg-center md:h-[580px]"
+    class="h-[230px] w-full bg-center object-cover md:h-[580px]"
     data-nimg="1"
     decoding="async"
     height="368"

@@ -41,8 +41,7 @@ export function Banner({
         width={500}
         height={368}
         quality={100}
-        objectFit="cover"
-        className="h-[230px] w-full bg-center md:h-[580px]"
+        className="h-[230px] w-full bg-center object-cover md:h-[580px]"
       />
 
       <div className="bg-black/70 p-5 text-white md:absolute md:bottom-0 md:left-0 md:right-0 md:p-8">

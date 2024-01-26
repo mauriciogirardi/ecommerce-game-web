@@ -10,7 +10,7 @@ describe('<Button />', () => {
 
     const button = screen.getByRole('button', { name: /click here/i })
     expect(button).toBeInTheDocument()
-    expect(button).toHaveClass('bg-linear h-9 px-3 text-sm')
+    expect(button).toHaveClass('bg-linear h-9 px-6 text-sm')
 
     expect(container).toMatchSnapshot()
   })
