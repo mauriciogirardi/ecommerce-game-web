@@ -74,4 +74,19 @@ describe('<Highlight />', () => {
     const floatImg = screen.getAllByRole('img', { name: /heading 1/i })
     expect(floatImg[1]).toHaveClass('scale-x-[-1] right-4 md:right-9')
   })
+
+  it('should be able to render large size button on desktop', () => {
+    vi.mocked(useBreakpoints).mockReturnValue({
+      lg: true,
+      '2xl': false,
+      md: false,
+      sm: false,
+      xl: false
+    })
+
+    render(<Highlight {...mockHighlight} />)
+    expect(screen.getByRole('button', { name: /buy now/i })).toHaveClass(
+      'h-10 px-8'
+    )
+  })
 })
