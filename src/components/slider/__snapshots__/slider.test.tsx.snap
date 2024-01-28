@@ -1,0 +1,68 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Slider /> > should be able to render the children as slider items 1`] = `
+<div
+  class="slick-slider slick-initialized"
+  dir="ltr"
+>
+  <button
+    class="slick-arrow slick-prev slick-disabled"
+    data-role="none"
+    style="display: block;"
+    type="button"
+  >
+     
+    Previous
+  </button>
+  <div
+    class="slick-list"
+  >
+    <div
+      class="slick-track"
+      style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
+    >
+      <div
+        aria-hidden="false"
+        class="slick-slide slick-active slick-current"
+        data-index="0"
+        style="outline: none; width: 0px;"
+        tabindex="-1"
+      >
+        <div>
+          <div
+            style="width: 100%; display: inline-block;"
+            tabindex="-1"
+          >
+            item 1
+          </div>
+        </div>
+      </div>
+      <div
+        aria-hidden="true"
+        class="slick-slide"
+        data-index="1"
+        style="outline: none; width: 0px;"
+        tabindex="-1"
+      >
+        <div>
+          <div
+            style="width: 100%; display: inline-block;"
+            tabindex="-1"
+          >
+            item 2
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    class="slick-arrow slick-next"
+    data-role="none"
+    style="display: block;"
+    type="button"
+  >
+     
+    Next
+  </button>
+</div>
+`;
