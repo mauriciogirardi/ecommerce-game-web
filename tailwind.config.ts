@@ -61,17 +61,24 @@ const config: Config = {
 
       backgroundImage: {
         linear:
-          'linear-gradient(179deg, #FF5F5F -14.51%, #F062C0 102.86%, #F23131 102.86%)'
+          'linear-gradient(179deg, #FF5F5F -14.51%, #F062C0 102.86%, #F23131 102.86%)',
+        skeleton:
+          'linear-gradient(to right,#f6f7f8 0%,#edeef1 20%,#f6f7f8 40%,#f6f7f8 100%)'
       },
 
       animation: {
-        'hover-link': 'hover-link 0.2s forwards'
+        'hover-link': 'hover-link 0.2s forwards',
+        skeleton: 'skeleton 1s linear infinite forwards'
       },
 
       keyframes: {
         'hover-link': {
           from: { width: '0' },
           to: { width: '100%' }
+        },
+        skeleton: {
+          '0%': { backgroundPosition: '-400px 0' },
+          '100%': { backgroundPosition: '400px 0' }
         }
       },
 

@@ -8,16 +8,13 @@ export default {
   component: GameCard,
   decorators: [
     (Story) => (
-      <div className="flex h-screen items-center justify-center p-4">
-        <Story />
+      <div className="flex h-screen items-center justify-center">
+        <div className="w-[300px]">
+          <Story />
+        </div>
       </div>
     )
-  ],
-  parameters: {
-    backgrounds: {
-      default: 'won-light'
-    }
-  }
+  ]
 } as Meta
 
 export const Default: StoryObj<typeof GameCard> = {

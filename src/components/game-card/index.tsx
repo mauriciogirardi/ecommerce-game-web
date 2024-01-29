@@ -1,7 +1,9 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 
+import { cn } from '@/lib/utils'
 import { formatCurrency } from '@/utils/formatCurrency'
 
 import { RibbonTypes } from '../banner'
@@ -18,6 +20,7 @@ export type GameCardProps = {
   priceDiscount?: number
   favorite?: boolean
   onFav?: () => void
+  className?: string
 }
 
 export function GameCard({
@@ -28,26 +31,38 @@ export function GameCard({
   ribbon,
   priceDiscount,
   favorite = false,
-  onFav
+  onFav,
+  className
 }: GameCardProps) {
   return (
-    <div className="relative h-[260px] w-[320px] rounded bg-white shadow-xl md:h-[315px] md:w-[380px]">
-      <Image
-        src={img}
-        alt={title}
-        width={380}
-        height={160}
-        className="h-[160px] rounded-t object-cover md:h-[200px]"
-      />
+    <div
+      className={cn(
+        'relative flex h-full w-full flex-col rounded bg-white shadow-xl',
+        className
+      )}
+    >
+      <Link
+        className="relative min-h-[140px] w-full rounded-t-xl bg-skeleton"
+        href="/"
+      >
+        <Image
+          src={img}
+          alt={title}
+          width={400}
+          height={140}
+          className="h-full w-full rounded-t-sm object-cover"
+        />
+      </Link>
 
-      <div className="flex flex-col p-3 md:p-5">
+      <div className="relative m-4 flex h-full flex-col justify-between">
         <div className="flex justify-between">
-          <div className="w-full">
-            <h2 className="max-w-[300px] overflow-hidden truncate text-ellipsis text-lg font-bold leading-5">
+          <Link href="/" className="max-w-[calc(100% - 25px)]">
+            <h2 className="max-w-[300px] overflow-hidden truncate text-ellipsis text-lg font-bold leading-5 text-black">
               {title}
             </h2>
             <span className="text-sm text-gray">{developer}</span>
-          </div>
+          </Link>
+
           <button
             onClick={onFav}
             className="h-0 text-primary hover:scale-[1.1] hover:shadow-md"
