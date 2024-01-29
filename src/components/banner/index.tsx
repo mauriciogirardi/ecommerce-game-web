@@ -4,6 +4,8 @@ import * as DOMPurify from 'dompurify'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { cn } from '@/lib/utils'
+
 import { Button } from '../button'
 import { Ribbon, RibbonProps } from '../ribbon'
 
@@ -21,6 +23,7 @@ export type BannerProps = {
   btnLabel: string
   alt?: string
   ribbon?: RibbonTypes
+  className?: string
 }
 
 export function Banner({
@@ -30,11 +33,12 @@ export function Banner({
   subtile,
   ribbon,
   title,
-  alt
+  alt,
+  className
 }: BannerProps) {
   const subtitleSanitize = DOMPurify.sanitize(subtile)
   return (
-    <main className="relative md:shadow-sm">
+    <main className={cn('relative md:shadow-sm', className)}>
       <Image
         src={img}
         alt={alt || title}
@@ -47,7 +51,7 @@ export function Banner({
       <div className="bg-black/70 p-5 text-white md:absolute md:bottom-0 md:left-0 md:right-0 md:p-8">
         <h1 className="text-2xl font-bold">{title}</h1>
         <h2 dangerouslySetInnerHTML={{ __html: subtitleSanitize }} />
-        <Link href={btnLink} className="mt-4 block">
+        <Link href={btnLink} className="mt-4 inline-block">
           <Button size="large">{btnLabel}</Button>
         </Link>
       </div>

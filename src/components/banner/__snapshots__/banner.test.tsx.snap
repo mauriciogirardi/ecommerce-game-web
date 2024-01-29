@@ -34,7 +34,7 @@ exports[`<Banner /> > should be able to render the Banner 1`] = `
        season
     </h2>
     <a
-      class="mt-4 block"
+      class="mt-4 inline-block"
       href="/"
     >
       <button
