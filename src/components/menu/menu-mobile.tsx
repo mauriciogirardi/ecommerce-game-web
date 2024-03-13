@@ -23,7 +23,7 @@ export function MenuMobile({ isLogged, isOpen, onOpenMenu }: MenuMobileProps) {
   return (
     <nav
       className={cn(
-        'fixed inset-0 z-menu h-screen overflow-hidden bg-white transition-menu duration-[0.3s]',
+        'fixed inset-0 z-20 h-screen overflow-hidden bg-white transition-menu duration-[0.3s]',
         !isOpen ? 'pointer-events-none opacity-0' : 'opacity-100'
       )}
       aria-hidden={!isOpen}
@@ -33,7 +33,7 @@ export function MenuMobile({ isLogged, isOpen, onOpenMenu }: MenuMobileProps) {
         onClick={() => onOpenMenu(false)}
         aria-label="Close menu"
         variant="icon"
-        className="absolute right-4 top-4 z-menu h-[24px] p-0 text-black"
+        className="absolute right-4 top-4 z-20 h-[24px] p-0 text-black"
       />
 
       <div

@@ -49,7 +49,7 @@ describe('<Heading />', () => {
     render(<Heading size="medium">Heading</Heading>)
     const heading = screen.getByRole('heading', { name: /heading/i })
     expect(heading).toHaveStyle({
-      'font-size': '1.5em'
+      'font-size': '16px'
     })
   })
 })

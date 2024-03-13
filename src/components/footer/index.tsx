@@ -7,13 +7,11 @@ import { PATH_EXPLORE, PATH_HOME } from '@/constants/path'
 import { Heading } from '../heading'
 import { Logo } from '../logo'
 
-// export type FooterProps = {}
-
 export function Footer() {
   return (
     <footer className="flex flex-col">
       <Logo color="black" />
-      <div className="mt-7 grid  grid-cols-2 gap-5 lg:grid-cols-4 ">
+      <div className="mt-7 grid  grid-cols-2 gap-5 text-sm lg:grid-cols-4">
         <div className="flex flex-col gap-1 text-gray">
           <Heading
             size="small"
@@ -21,7 +19,7 @@ export function Footer() {
             line="bottom"
             className="mb-3 uppercase"
           >
-            Contact
+            Contact us
           </Heading>
           <nav
             aria-labelledby="footer contacts"
@@ -49,16 +47,16 @@ export function Footer() {
             Follow us
           </Heading>
           <nav aria-labelledby="social media" className="flex flex-col gap-1">
-            <a className="w-min hover:text-gray/80" href="#">
+            <a className="w-min hover:text-gray/80" href="/">
               Instagram
             </a>
-            <a className="w-min hover:text-gray/80" href="#">
+            <a className="w-min hover:text-gray/80" href="/">
               Twitter
             </a>
-            <a className="w-min hover:text-gray/80" href="#">
+            <a className="w-min hover:text-gray/80" href="/">
               YouTube
             </a>
-            <a className="w-min hover:text-gray/80" href="#">
+            <a className="w-min hover:text-gray/80" href="/">
               Facebook
             </a>
           </nav>
@@ -85,7 +83,7 @@ export function Footer() {
             </Link>
             <a
               className="w-min hover:text-gray/80"
-              href="#"
+              href="/"
               target="_blank"
               rel="noopener, noreferrer"
             >
@@ -93,7 +91,7 @@ export function Footer() {
             </a>
             <a
               className="w-min hover:text-gray/80"
-              href="#"
+              href="/"
               target="_blank"
               rel="noopener, noreferrer"
             >

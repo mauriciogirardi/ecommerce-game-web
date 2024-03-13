@@ -30,7 +30,7 @@ export function Highlight({
   const { lg } = useBreakpoints()
 
   return (
-    <div className="relative grid min-h-[230px] w-full overflow-hidden after:absolute after:inset-0 after:z-overlay after:h-full after:w-full after:bg-black/60 after:content-[''] md:min-h-[320px]">
+    <div className="relative grid min-h-[230px] w-full overflow-hidden after:absolute after:inset-0 after:z-30 after:h-full after:w-full after:bg-black/60 after:content-[''] md:min-h-[320px]">
       <Image
         src={backgroundImage}
         alt={title}
@@ -59,7 +59,7 @@ export function Highlight({
           'relative z-40 p-4 text-white md:self-end md:p-9'
         )}
       >
-        <h1 className="text-large font-bold md:text-xxlarge">{title}</h1>
+        <h1 className="text-large md:text-xxlarge font-bold">{title}</h1>
         <h2 className="mb-3 text-sm md:mb-5 md:text-base">{subtitle}</h2>
         <Link href={btnLink}>
           <Button size={lg ? 'large' : 'default'}>{btnLabel}</Button>

@@ -1,6 +1,5 @@
 'use client'
 
-import * as DOMPurify from 'dompurify'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -18,7 +17,7 @@ export type RibbonTypes = {
 export type BannerProps = {
   img: string
   title: string
-  subtile: string
+  subtitle: string
   btnLink: string
   btnLabel: string
   alt?: string
@@ -30,27 +29,26 @@ export function Banner({
   btnLabel,
   btnLink,
   img,
-  subtile,
+  subtitle,
   ribbon,
   title,
   alt,
   className
 }: BannerProps) {
-  const subtitleSanitize = DOMPurify.sanitize(subtile)
   return (
     <main className={cn('relative md:shadow-sm', className)}>
       <Image
         src={img}
         alt={alt || title}
-        width={500}
-        height={368}
+        width={700}
+        height={580}
         quality={100}
-        className="h-[230px] w-full bg-center object-cover md:h-[580px]"
+        className="h-full w-full bg-center object-cover md:h-[580px]"
       />
 
       <div className="bg-black/70 p-5 text-white md:absolute md:bottom-0 md:left-0 md:right-0 md:p-8">
         <h1 className="text-2xl font-bold">{title}</h1>
-        <h2 dangerouslySetInnerHTML={{ __html: subtitleSanitize }} />
+        <h2 dangerouslySetInnerHTML={{ __html: subtitle }} />
         <Link href={btnLink} className="mt-4 inline-block">
           <Button size="large">{btnLabel}</Button>
         </Link>

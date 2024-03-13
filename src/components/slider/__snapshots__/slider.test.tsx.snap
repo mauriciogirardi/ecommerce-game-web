@@ -25,7 +25,7 @@ exports[`<Slider /> > should be able to render the children as slider items 1`] 
         aria-hidden="false"
         class="slick-slide slick-active slick-current"
         data-index="0"
-        style="outline: none; width: 0px;"
+        style="outline-color: none; outline-style: none; outline-width: initial; width: 0px;"
         tabindex="-1"
       >
         <div>
@@ -41,7 +41,7 @@ exports[`<Slider /> > should be able to render the children as slider items 1`] 
         aria-hidden="true"
         class="slick-slide"
         data-index="1"
-        style="outline: none; width: 0px;"
+        style="outline-color: none; outline-style: none; outline-width: initial; width: 0px;"
         tabindex="-1"
       >
         <div>

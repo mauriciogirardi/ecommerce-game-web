@@ -5,6 +5,6 @@ export const mockBanner: BannerProps = {
   btnLink: '/',
   img: '/assets/imgs/banner.png',
   title: 'Defy death',
-  subtile:
+  subtitle:
     'Play the new <strong style="color:#F231A5;">CrashLands</strong> season'
 }

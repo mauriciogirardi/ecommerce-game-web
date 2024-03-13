@@ -9,5 +9,9 @@ export type SliderProps = PropsWithChildren & {
 }
 
 export function Slider({ children, settings }: SliderProps) {
-  return <SlickSlider {...settings}>{children}</SlickSlider>
+  return (
+    <SlickSlider {...settings} accessibility>
+      {children}
+    </SlickSlider>
+  )
 }

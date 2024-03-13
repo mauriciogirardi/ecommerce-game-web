@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { describe, expect, it } from 'vitest'
+import { expect } from 'vitest'
 
 import { Footer } from '.'
 
@@ -8,7 +8,7 @@ describe('<Footer />', () => {
     render(<Footer />)
 
     expect(
-      screen.getByRole('heading', { name: /contact/i })
+      screen.getByRole('heading', { name: /contact us/i })
     ).toBeInTheDocument()
     expect(
       screen.getByRole('heading', { name: /location/i })

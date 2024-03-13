@@ -24,10 +24,10 @@ const poppins = localFont({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | wongames',
-    default: 'wongames'
+    template: '%s | Won Games',
+    default: 'Won ames'
   },
-  description: 'Start new applications with a boilerplate'
+  description: 'The best Game Stores in the world!'
 }
 
 export default function RootLayout({
@@ -37,7 +37,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={poppins.variable}>
-      <body className="font-poppins antialiased">{children}</body>
+      <body className="h-screen bg-mainBg font-poppins text-white antialiased">
+        {children}
+      </body>
     </html>
   )
 }

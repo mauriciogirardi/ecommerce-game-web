@@ -24,7 +24,7 @@ describe('<Highlight />', () => {
     render(<Highlight {...mockHighlight} />)
 
     expect(
-      screen.getByRole('heading', { name: /heading 1/i, level: 1 })
+      screen.getByRole('heading', { name: /read dead is back/i, level: 1 })
     ).toBeInTheDocument()
     expect(
       screen.getByRole('heading', { name: /heading 2/i, level: 2 })
@@ -41,11 +41,12 @@ describe('<Highlight />', () => {
   it('should be able to render the background image', () => {
     render(<Highlight {...mockHighlight} />)
 
-    expect(screen.getByRole('img', { name: /heading 1/i })).toHaveAttribute(
-      'alt',
-      'Heading 1'
-    )
-    const backgroundImg = screen.getAllByRole('img', { name: /heading 1/i })
+    expect(
+      screen.getByRole('img', { name: /read dead is back/i })
+    ).toHaveAttribute('alt', 'Read dead is back')
+    const backgroundImg = screen.getAllByRole('img', {
+      name: /read dead is back/i
+    })
     expect(backgroundImg[0]).toHaveAttribute(
       'src',
       '/_next/image?url=%2Fassets%2Fimgs%2Fdead-bg.png&w=1920&q=75'
@@ -56,7 +57,7 @@ describe('<Highlight />', () => {
     render(
       <Highlight {...mockHighlight} floatImage={'/assets/imgs/dead-img.png'} />
     )
-    const floatImg = screen.getAllByRole('img', { name: /heading 1/i })
+    const floatImg = screen.getAllByRole('img', { name: /read dead is back/i })
     expect(floatImg[1]).toHaveAttribute(
       'src',
       '/_next/image?url=%2Fassets%2Fimgs%2Fdead-img.png&w=640&q=75'
@@ -71,7 +72,7 @@ describe('<Highlight />', () => {
         float="right"
       />
     )
-    const floatImg = screen.getAllByRole('img', { name: /heading 1/i })
+    const floatImg = screen.getAllByRole('img', { name: /read dead is back/i })
     expect(floatImg[1]).toHaveClass('scale-x-[-1] right-4 md:right-9')
   })
 

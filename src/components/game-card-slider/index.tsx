@@ -71,11 +71,9 @@ export function GameCardSlider({
   className
 }: GameCardSliderProps) {
   return (
-    <div className={cn(buttonVariants({ color, className }), '')}>
+    <div className={cn(buttonVariants({ color, className }), 'card-slider')}>
       <Slider settings={settings}>
-        {games.map((game, index) => (
-          <GameCard key={index} {...game} />
-        ))}
+        {games?.map((game, index) => <GameCard key={index} {...game} />)}
       </Slider>
     </div>
   )

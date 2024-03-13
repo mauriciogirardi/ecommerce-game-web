@@ -13,9 +13,9 @@ export type BannerSliderProps = {
 const settings: Settings = {
   arrows: false,
   dots: true,
+  infinite: false,
   vertical: true,
   verticalSwiping: true,
-  infinite: false,
   responsive: [
     {
       breakpoint: 1170,
@@ -29,10 +29,18 @@ const settings: Settings = {
 
 export function BannerSlider({ banners }: BannerSliderProps) {
   return (
-    <Slider settings={settings}>
-      {banners.map((banner, index) => (
-        <Banner key={index} {...banner} className="mx-auto lg:max-w-[1004px]" />
-      ))}
-    </Slider>
+    <div className="banner-slider">
+      <Slider settings={settings}>
+        {banners?.map((banner, index) => {
+          return (
+            <Banner
+              key={index}
+              {...banner}
+              className="mx-auto lg:max-w-[1004px]"
+            />
+          )
+        })}
+      </Slider>
+    </div>
   )
 }

@@ -19,7 +19,7 @@ export function Menu({ username }: MenuProps) {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
 
   return (
-    <div className="relative flex items-center justify-between p-small text-white">
+    <div className="relative flex items-center justify-between px-4 py-6 text-white">
       <Button
         aria-label="Open menu"
         onClick={() => setIsOpenMenu(true)}
@@ -37,15 +37,12 @@ export function Menu({ username }: MenuProps) {
         </Link>
 
         <div className="ml-6 hidden items-center gap-6 md:flex">
-          <NavLink
-            href={PATH_HOME}
-            label="Home"
-            className="mb-0 text-[1.2rem] text-white"
-          />
+          <NavLink href={PATH_HOME} label="Home" color="white" size="medium" />
           <NavLink
             href={PATH_EXPLORE}
             label="Explore"
-            className="mb-0 text-[1.2rem] text-white"
+            color="white"
+            size="medium"
           />
         </div>
       </div>

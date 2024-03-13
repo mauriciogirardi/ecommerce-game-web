@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils'
 const headingVariants = cva('font-bold', {
   variants: {
     line: {
-      left: 'pl-xxsmall border-l-4',
+      left: 'pl-2 border-l-4',
       bottom:
         'relative after:absolute after:bottom-[-3px] after:left-0 after:w-[30px] after:border-b-4 after:content-[""]'
     },
@@ -17,7 +17,7 @@ const headingVariants = cva('font-bold', {
       secondary: 'after:border-secondary border-secondary'
     },
     size: {
-      default: 'text-[28px]',
+      default: 'text-3xl',
       medium: 'text-xl',
       small: 'text-base'
     },

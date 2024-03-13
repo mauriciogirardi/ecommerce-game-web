@@ -37,19 +37,19 @@ export function GameCard({
   return (
     <div
       className={cn(
-        'relative flex h-full w-full flex-col rounded bg-white shadow-xl',
+        'relative flex h-full w-full flex-col rounded bg-white shadow-md',
         className
       )}
     >
       <Link
-        className="relative min-h-[140px] w-full rounded-t-xl bg-skeleton"
+        className="relative min-h-[160px] w-full rounded-t-xl bg-skeleton"
         href="/"
       >
         <Image
           src={img}
           alt={title}
           width={400}
-          height={140}
+          height={160}
           className="h-full w-full rounded-t-sm object-cover"
         />
       </Link>

@@ -2,9 +2,10 @@ import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}'
+    './src/pages/**/*.tsx',
+    './src/components/**/*.tsx',
+    './src/app/**/*.tsx',
+    './src/templates/**/*.tsx'
   ],
   darkMode: ['class', '[data-mode="dark"]'],
   theme: {
@@ -12,6 +13,14 @@ const config: Config = {
       fontFamily: {
         poppins: 'var(--font-poppins)'
       },
+      container: {
+        center: true,
+        padding: '0',
+        screens: {
+          '2xl': '1300px'
+        }
+      },
+
       colors: {
         primary: '#F231A5',
         secondary: '#3CD3C1',
@@ -22,41 +31,15 @@ const config: Config = {
         gray: '#8F8F8F',
         darkGray: '#2E2F42'
       },
-      fontSize: {
-        xsmall: '0.75rem', // 12px
-        small: '0.875rem', // 14px
-        medium: '1rem', // 16px
-        large: '1.125rem', // 18px
-        xlarge: '1.25rem', // 20px
-        xxlarge: '1.75rem' // 28px
-      },
       fontWeight: {
         light: '300',
         normal: '400',
         bold: '600'
       },
-      borderRadius: {
-        radius: '0.25rem' // 4 px
-      },
+
       grid: {
         container: '81.25',
         gutter: '2rem'
-      },
-      spacing: {
-        xxsmall: '0.5rem', // 8px
-        xsmall: '1rem', // 16px
-        small: '1.5rem', // 20px
-        medium: '2rem', // 32px
-        large: '2.5rem', // 40px
-        xlarge: '3rem', // 48px
-        xxlarge: '3.5rem' // 56px
-      },
-      zIndex: {
-        base: '10',
-        menu: '20',
-        overlay: '30',
-        modal: '40',
-        alwaysOnTop: '50'
       },
 
       backgroundImage: {

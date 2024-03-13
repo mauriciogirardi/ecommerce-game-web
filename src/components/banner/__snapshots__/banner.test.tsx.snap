@@ -6,15 +6,15 @@ exports[`<Banner /> > should be able to render the Banner 1`] = `
 >
   <img
     alt="Defy death"
-    class="h-[230px] w-full bg-center object-cover md:h-[580px]"
+    class="h-full w-full bg-center object-cover md:h-[580px]"
     data-nimg="1"
     decoding="async"
-    height="368"
+    height="580"
     loading="lazy"
-    src="/_next/image?url=%2Fassets%2Fimgs%2Fbanner.png&w=1080&q=100"
-    srcset="/_next/image?url=%2Fassets%2Fimgs%2Fbanner.png&w=640&q=100 1x, /_next/image?url=%2Fassets%2Fimgs%2Fbanner.png&w=1080&q=100 2x"
+    src="/_next/image?url=%2Fassets%2Fimgs%2Fbanner.png&w=1920&q=100"
+    srcset="/_next/image?url=%2Fassets%2Fimgs%2Fbanner.png&w=750&q=100 1x, /_next/image?url=%2Fassets%2Fimgs%2Fbanner.png&w=1920&q=100 2x"
     style="color: transparent;"
-    width="500"
+    width="700"
   />
   <div
     class="bg-black/70 p-5 text-white md:absolute md:bottom-0 md:left-0 md:right-0 md:p-8"
@@ -38,7 +38,7 @@ exports[`<Banner /> > should be able to render the Banner 1`] = `
       href="/"
     >
       <button
-        class="inline-flex items-center justify-center whitespace-nowrap rounded font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 bg-linear hover:opacity-90 h-10 px-8 text-white"
+        class="inline-flex items-center justify-center whitespace-nowrap rounded text-base ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 bg-linear hover:opacity-90 h-10 px-8 text-white"
       >
         Buy now
       </button>
