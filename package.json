@@ -1,25 +1,29 @@
 {
-  "name": "boilerplate-next-app-router",
+  "name": "web",
   "version": "1.0.0",
   "private": true,
   "author": {
     "email": "devmauriciogirardi@gmail.com",
     "name": "Mauricio Girardi"
   },
-  "description": "This is a boilerplate.",
+  "description": "ecommecer",
   "packageManager": "pnpm@8.2.0",
   "engines": {
     "node": ">=18",
     "pnpm": ">=7"
   },
   "husky": {
-    "gitDir": "./.git"
+    "gitDir": "./.git",
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
     "prepare": "husky install",
     "test": "vitest --run",
     "test:watch": "vitest",

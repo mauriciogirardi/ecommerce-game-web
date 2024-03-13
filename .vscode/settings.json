@@ -13,9 +13,11 @@
     "ondemand",
     "plopfile",
     "poppins",
+    "typecheck",
+    "Typecheck",
     "wongames",
     "xlarge",
-    "xxlarge",
+    "xxlarge"
   ],
   "editor.formatOnSave": true
 }
