@@ -59,8 +59,8 @@ export function Highlight({
           'relative z-40 p-4 text-white md:self-end md:p-9'
         )}
       >
-        <h1 className="text-large md:text-xxlarge font-bold">{title}</h1>
-        <h2 className="mb-3 text-sm md:mb-5 md:text-base">{subtitle}</h2>
+        <h1 className="text-xl font-bold md:text-3xl">{title}</h1>
+        <h2 className="mb-3 text-sm md:mb-5 md:text-lg">{subtitle}</h2>
         <Link href={btnLink}>
           <Button size={lg ? 'large' : 'default'}>{btnLabel}</Button>
         </Link>
