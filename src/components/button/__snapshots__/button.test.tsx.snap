@@ -3,7 +3,7 @@
 exports[`<Button /> > should be able to render the button 1`] = `
 <div>
   <button
-    class="inline-flex items-center justify-center whitespace-nowrap rounded ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 bg-linear text-white hover:opacity-90 h-9 px-6 text-sm"
+    class="inline-flex items-center gap-2 justify-center whitespace-nowrap rounded transition-colors outline-none focus:outline-offset-2 focus:outline-primary disabled:cursor-not-allowed disabled:opacity-50 h-9 px-6 text-sm bg-linear text-white hover:opacity-90"
   >
     click here
   </button>

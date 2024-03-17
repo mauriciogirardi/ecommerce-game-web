@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { BadgePlusIcon } from 'lucide-react'
+import { BadgePlusIcon, Car } from 'lucide-react'
 
 import { Button } from '.'
 
@@ -10,7 +10,9 @@ export default {
     icon: {
       type: 'symbol',
       defaultValue: '<Icon />'
-    }
+    },
+    size: { control: 'radio', options: ['default', 'large', 'small', 'icon'] },
+    variant: { control: 'radio', options: ['default', 'ghost', 'icon'] }
   },
   decorators: [
     (Story) => (
@@ -39,5 +41,14 @@ export const Icon: StoryObj<typeof Button> = {
   args: {
     icon: <BadgePlusIcon />,
     children: 'Buy now'
+  }
+}
+
+export const Ghost: StoryObj<typeof Button> = {
+  args: {
+    icon: <Car />,
+    children: 'Buy now',
+    variant: 'ghost',
+    size: 'large'
   }
 }

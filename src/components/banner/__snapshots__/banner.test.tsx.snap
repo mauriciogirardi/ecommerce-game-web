@@ -38,7 +38,7 @@ exports[`<Banner /> > should be able to render the Banner 1`] = `
       href="/"
     >
       <button
-        class="inline-flex items-center justify-center whitespace-nowrap rounded text-base ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 bg-linear hover:opacity-90 h-10 px-8 text-white"
+        class="inline-flex items-center gap-2 justify-center whitespace-nowrap rounded text-base transition-colors outline-none focus:outline-offset-2 focus:outline-primary disabled:cursor-not-allowed disabled:opacity-50 h-10 px-8 bg-linear text-white hover:opacity-90"
       >
         Buy now
       </button>
