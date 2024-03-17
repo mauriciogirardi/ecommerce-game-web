@@ -1,0 +1,30 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<TextField /> > should be able to render error message. 1`] = `
+<div
+  aria-disabled="false"
+  class="group w-full space-y-1"
+>
+  <label
+    class="cursor-pointer text-sm font-medium text-zinc-700"
+    for="free"
+  >
+    Free
+  </label>
+  <div
+    class="flex items-center rounded-md border-2 border-lightGray bg-lightGray px-3 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-red-400"
+  >
+    <input
+      autocomplete="off"
+      class="w-full border-0 bg-transparent py-1 text-lg text-black outline-none pl-3 disabled:cursor-not-allowed disabled:text-zinc-500"
+      id="free"
+      value=""
+    />
+  </div>
+  <span
+    class="text-xs font-medium text-red-400"
+  >
+    Filed required!
+  </span>
+</div>
+`;
